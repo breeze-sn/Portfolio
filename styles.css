@@ -1,0 +1,250 @@
+body {
+    font-family: 'Roboto Slab', 'Helvetica Neue', sans-serif; 
+    margin: 0;
+    padding: 0;
+    background: #000000; 
+    color: #ffffff; 
+}
+
+header {
+    background: #000000;
+    color: white;
+    padding: 25px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+#about h2 {
+    color: rgb(80, 86, 255);
+}
+
+.text-overlay {
+    text-align: center;
+    color: white;
+    background-color: #000000; 
+    transition: color 0.3s ease; 
+}
+
+.text-overlay:hover {
+    color: rgb(80, 86, 255); 
+    transition: color 0.3s ease-in-out;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-link {
+    color: #ffffff; 
+    font-size: 24px; 
+    margin-right: 10px; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: rgb(80, 86, 255); 
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px; 
+    transition: color 0.3s ease;
+}
+
+nav ul li a.active {
+    color: rgb(80, 86, 255); 
+}
+
+.section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.section.full-screen {
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-overlay h1 {
+    margin-bottom: 20px;
+    font-size: 3em;
+}
+
+.text-overlay p {
+    font-size: 1.5em;
+    opacity: 0.9;
+}
+
+.about-content {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    flex-wrap: wrap;
+    padding: 20px;
+    text-align: left; 
+}
+
+.profile-container {
+    flex: 1;
+    padding: 0 10px;
+    box-sizing: border-box;
+    text-align: center; 
+}
+
+.profile-picture {
+    max-width: 100%;
+    height: auto;
+}
+
+.about-container {
+    flex: 2; 
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-gallery div {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: calc(33% - 40px);
+    box-sizing: border-box;
+    background: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-gallery div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px; 
+    margin: 0 auto; 
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: white; 
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 14px; 
+    background-color: rgba(255, 255, 255, 0.1); 
+    color: #ffffff; 
+}
+
+form textarea {
+    resize: vertical; 
+    min-height: 100px; 
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 16px; 
+}
+
+form button:hover {
+    color:white;
+    background: black;
+}
+
+footer {
+    background: #000000;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-gallery div {
+        width: calc(50% - 40px);
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .profile-container,
+    .about-container {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .project-gallery div {
+        width: calc(100% - 40px);
+    }
+
+    form input,
+    form textarea {
+        width: 100%;
+    }
+}
